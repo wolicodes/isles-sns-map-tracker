@@ -2,13 +2,18 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { styles } from './GridStyles';
 
 interface Props {
-  initialValue?: string;
+  cellId: number;
 }
 
-const EditableCell: React.FC<Props> = ({ initialValue = '' }) => {
+const EditableCell: React.FC<Props> = ({ cellId }) => {
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const [editable, setEditable] = useState(false);
-  const [currentValue, setCurrentValue] = useState(initialValue);
+  const [currentValue, setCurrentValue] = useState<string>(() => {
+    const storedValue = localStorage.getItem(
+      `editableCellCurrentValue${cellId}`,
+    );
+    return storedValue !== null ? storedValue : '';
+  });
 
   useEffect(() => {
     if (editable && inputRef.current) {
@@ -17,6 +22,10 @@ const EditableCell: React.FC<Props> = ({ initialValue = '' }) => {
       textarea.setSelectionRange(textarea.value.length, textarea.value.length);
     }
   }, [editable]);
+
+  useEffect(() => {
+    localStorage.setItem(`editableCellCurrentValue${cellId}`, currentValue);
+  }, [cellId, currentValue]);
 
   const setEditableOff = useCallback(() => {
     setEditable(false);

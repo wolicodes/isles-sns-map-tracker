@@ -2,13 +2,13 @@ import EditableCell from './EditableCell';
 import { styles } from './GridStyles';
 
 function App() {
-  const elems = Array.from({ length: 25 }, () => Math.random());
+  const elems = Array.from({ length: 25 }, () => '');
 
   return (
     <>
       <div className={styles.parent}>
-        {elems.map((id) => (
-          <EditableCell key={id} />
+        {elems.map((elem, i) => (
+          <EditableCell cellId={i} key={i} />
         ))}
       </div>
     </>
