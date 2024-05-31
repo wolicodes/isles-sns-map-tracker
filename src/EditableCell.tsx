@@ -58,6 +58,7 @@ const EditableCell: React.FC<Props> = ({ cellId }) => {
         <textarea
           ref={inputRef}
           value={currentValue}
+          className={styles.textArea}
           onBlur={setEditableOff}
           onChange={handleTyping}
           onKeyDown={handleKeyDown}
