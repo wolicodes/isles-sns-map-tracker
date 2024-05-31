@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <div className={styles.parent}>
-        {elems.map((elem, i) => (
+        {elems.map((_, i) => (
           <EditableCell cellId={i} key={i} />
         ))}
       </div>
