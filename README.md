@@ -1,5 +1,7 @@
 # Isles of Sea & Sky Map Tracker
 
+https://wolicodes.github.io/isles-sns-map-tracker/
+
 ### What is this?
 
 This is a very raw map tracker for this awesome game: https://store.steampowered.com/app/1233070/Isles_of_Sea_and_Sky/
