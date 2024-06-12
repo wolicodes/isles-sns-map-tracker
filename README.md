@@ -12,6 +12,9 @@ Everything you write is saved in localStorage.
 
 The reset button clears it, and it doesn't have a confirmation so be wary.
 
+Random example:
+![image](https://github.com/wolicodes/isles-sns-map-tracker/assets/676095/415768bc-e393-440d-8df6-e2c17275ba53)
+
 ### Commands
 
 Click on a cell: enter `edit` mode
