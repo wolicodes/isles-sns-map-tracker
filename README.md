@@ -17,7 +17,7 @@ Random example:
 
 ### Commands
 
-Click on a cell: enter `edit` mode
-Enter: validate the notes and exit `edit` mode
-Shift + Enter: Insert new line in notes
+Click on a cell: enter `edit` mode\
+Enter: validate the notes and exit `edit` mode\
+Shift + Enter: Insert new line in notes\
 Input 'X' in the cell: Insert a big red cross, for when you fully cleared this cell.
